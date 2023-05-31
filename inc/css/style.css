@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.conteneur {
+    margin: 0 auto;
+    max-: 1170px;
+}
+:root {
+    --primary-color: #08706e;
+    --secondary-color: #9dc334;
+    --tertiary-color: #b80000;  
+    --text-color: #fbfbfb;  
+}
+/**************************************************** HAUT ************************************************/
+.title {
+    font-size: 35px;
+    color: var(--secondary-color);
+}
+header {
+    background: #000000;
+    padding: 5px;
+    text-align: center;
+}
+
+header span {
+    color: var(--text-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 5%;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+header a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 5px;
+}
+
+header nav a:hover {
+    background: var(--secondary-color);
+    border-radius: 2px;
+}
+
+/**************************************************** MILIEU ************************************************/
+section {
+    padding: 30px;
+    min-height: 800px;
+}
+
+/**************************************************** BAS ************************************************/
+footer {
+    background: #000;
+    color: var(--text-color);
+    text-align: center;
+    padding: 7px 0;
+}
+
+/**************************************************** GENERAL ************************************************/
+.erreur {
+    background: #ff0000;
+    padding: 5px;
+    margin: 5px;
+}
+
+.validation {
+    background: #669933;
+    padding: 5px;
+    margin: 5px;
+}
