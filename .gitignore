@@ -1,1 +1,8 @@
 /admin
+
+#Dépendances
+/vendor/
+
+#Variables d'environnement
+.env
+

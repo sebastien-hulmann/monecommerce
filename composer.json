@@ -1,0 +1,17 @@
+{
+    "name": "sebas/monecommerce",
+    "autoload": {
+        "psr-4": {
+            "Sebas\\Monecommerce\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "sebastien-hulmann",
+            "email": "sebashul@hotmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.5"
+    }
+}
