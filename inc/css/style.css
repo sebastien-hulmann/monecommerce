@@ -16,6 +16,9 @@ a {
     --secondary-color: #9dc334;
     --tertiary-color: #b80000;  
     --text-color: #fbfbfb;  
+    --bg-color: #000000;
+    --error-color: red;
+    --valide-color:green;
 }
 /**************************************************** HAUT ************************************************/
 .title {
@@ -23,7 +26,7 @@ a {
     color: var(--secondary-color);
 }
 header {
-    background: #000000;
+    background: var(--bg-color);
     padding: 5px;
     text-align: center;
 }
@@ -60,7 +63,7 @@ section {
 
 /**************************************************** BAS ************************************************/
 footer {
-    background: #000;
+    background: var(--bg-color);
     color: var(--text-color);
     text-align: center;
     padding: 7px 0;
@@ -68,13 +71,13 @@ footer {
 
 /**************************************************** GENERAL ************************************************/
 .erreur {
-    background: #ff0000;
+    background: var(--error-color);
     padding: 5px;
     margin: 5px;
 }
 
 .validation {
-    background: #669933;
+    background: var(--valide-color);
     padding: 5px;
     margin: 5px;
 }
