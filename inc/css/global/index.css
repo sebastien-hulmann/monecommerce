@@ -1,0 +1,30 @@
+body {
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: 0fr 1fr 0fr;
+}
+
+header, footer {
+    background-color: #333;
+}
+
+.conteneur {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.erreur{
+    background: #f36666;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.validation {
+    background: #669933;
+    padding: 5px;
+    margin: 5px;
+}

@@ -1,0 +1,10 @@
+textarea {
+    resize: none;
+}
+
+.btnconnex {
+    width: 80%;
+    height: 25px;
+    border-radius: 5px;
+    color:#333;
+}
