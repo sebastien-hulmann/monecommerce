@@ -1,15 +1,21 @@
-<?php require_once("./inc/init.inc.php"); 
-if($_POST) {
+<?php require_once("./inc/init.inc.php");
+if (isset($_GET['action']) && $_GET['action'] == "deconnexion") {
+    session_destroy();
+}
+if (internauteConnecte()) {
+    header("location:profil.php");
+}
+if ($_POST) {
     $resultat = executeRequete("SELECT * FROM utilisateur WHERE pseudo='$_POST[pseudo]'");
-    if ($resultat -> num_rows != 0) {
-        $membre = $resultat->fetch_assoc();    
+    if ($resultat->num_rows != 0) {
+        $membre = $resultat->fetch_assoc();
         if (password_verify($_POST['mot_de_passe'], $membre['mot_de_passe'])) {
             foreach ($membre as $indice => $element) {
                 if ($indice != 'mot_de_passe') {
-                    $_SESSION['membre'][$indice] = $element;
+                    $_SESSION['utilisateur'][$indice] = $element;
                 }
             }
-            header("location:profil.php");
+            header('location: profil.php', true);
         } else {
             $contenu .= '<div class="erreur">Erreur de mot de passe</div>';
         }
