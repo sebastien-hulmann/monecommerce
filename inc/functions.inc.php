@@ -25,3 +25,19 @@ function debug($var, $mode = 1)
     }
     echo '</div>';
 }
+
+function internauteConnecte()
+{
+    if (!isset($_SESSION['utilisateur']))
+        return false;
+    else
+        return true;
+}
+
+function internauteEstConnecteEtEstAdmin()
+{
+    if (internauteConnecte() && $_SESSION['utilisateur']['statut'] == 1)
+        return true;
+    else
+        return false;
+}
