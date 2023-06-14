@@ -4,8 +4,16 @@ body {
     grid-template-rows: 0fr 1fr 0fr;
 }
 
+:root {
+    --primary-color:#fbfbfb;
+    --secondary-color:#333;
+    --tertiary-color:gold;
+    --error-color:#f36666;
+    --valid-color:#669933;
+}
+
 header, footer {
-    background-color: #333;
+    background-color: var(--secondary-color);
 }
 
 .conteneur {
@@ -17,14 +25,14 @@ header, footer {
 }
 
 .erreur{
-    background: #f36666;
+    background: var(--error-color);
     padding: 5px;
     margin: 5px;
     border-radius: 10px;
 }
 
 .validation {
-    background: #669933;
+    background: var(--valid-color);
     padding: 5px;
     margin: 5px;
     border-radius: 10px;
@@ -51,7 +59,7 @@ header, footer {
 }
 
 hr {
-    color: #333;
+    color: var(--secondary-color);
     width: 250px;
 }
 table{

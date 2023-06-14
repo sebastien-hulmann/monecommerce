@@ -1,5 +1,6 @@
 <?php
 require_once("../inc/init.inc.php");
+$TITRE = 'Ecommerce | Gestion boutique';
 //----- TRAITEMENT PHP -----//
 //----- VERIFICATION ADMIN -----//
 if (!internauteEstConnecteEtEstAdmin()) {
