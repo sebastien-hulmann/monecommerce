@@ -1,4 +1,5 @@
 <?php require_once("./inc/init.inc.php");
+$TITRE='Ecommerce | Connexion'; 
 if (isset($_GET['action']) && $_GET['action'] == "deconnexion") {
     session_destroy();
 }
@@ -26,6 +27,10 @@ if ($_POST) {
 } ?>
 <?php require_once("./inc/haut.inc.php"); ?>
 <?php echo $contenu; ?>
+
+
+
+
 
 <form method="post" action="">
     <label for="pseudo">Pseudo</label><br>

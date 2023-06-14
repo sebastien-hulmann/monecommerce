@@ -7,6 +7,7 @@ function toggleNav() {
     }
 }
 
+
 function previewImage() {
   var preview = document.getElementById("preview");
   var fileInput = document.getElementById("photo");
