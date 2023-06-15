@@ -1,6 +1,6 @@
 <?php
 require_once("./inc/init.inc.php");
-$TITRE = 'Ecommerce | Boutique';
+$title = " | Boutique ";
 //---- TRAITEMENT PHP
 //---- AFFICHAGE DES CATEGORIES
 $categories_des_produits = executeRequete("SELECT DISTINCT categorie FROM produit");
