@@ -1,5 +1,5 @@
 <?php require_once("./inc/init.inc.php");
-$TITRE='Ecommerce | Connexion'; 
+$title = " | Connexion ";
 if (isset($_GET['action']) && $_GET['action'] == "deconnexion") {
     session_destroy();
 }
@@ -23,14 +23,9 @@ if ($_POST) {
     } else {
         $contenu .= '<div class="erreur">Erreur de pseudo</div>';
     }
-
 } ?>
 <?php require_once("./inc/haut.inc.php"); ?>
 <?php echo $contenu; ?>
-
-
-
-
 
 <form method="post" action="">
     <label for="pseudo">Pseudo</label><br>

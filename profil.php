@@ -1,6 +1,6 @@
 <?php
 require_once("./inc/init.inc.php");
-$TITRE = 'Ecommerce | Profil';
+$title = " | Profil ";
 //------- TRAITEMENT PHP ---//
 if (!internauteConnecte())
      header("location:connexion.php");

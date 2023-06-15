@@ -1,11 +1,15 @@
 <?php 
+// titre onglet
+$title = "";
+
+
 // configuration phpdotenv
 require __DIR__ . '/../vendor/autoload.php';
 Dotenv\Dotenv::createUnsafeImmutable(__DIR__ . '/../')->load();
 
 //------- BDD
-// $mysqli = new mysqli($_ENV['DB_HOST'], $_ENV['DB_USER'], $_ENV['DB_PASSWORD'], $_ENV['DB_NAME']);
-$mysqli = new mysqli('localhost', 'db_user', '12345', 'monecommerce');
+$mysqli = new mysqli($_ENV['DB_HOST'], $_ENV['DB_USER'], $_ENV['DB_PASSWORD'], $_ENV['DB_NAME']);
+// $mysqli = new mysqli('localhost', 'db_user', '12345', 'monecommerce');
 if ($mysqli->connect_error)
     die('Un problème est survenu lors de la tentative de connexion à la BDD : ' . $mysqli->connect_error);
 
