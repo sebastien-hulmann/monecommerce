@@ -1,12 +1,14 @@
-<?php require_once("./inc/init.inc.php");
-$title = " | Inscription ";
+<?php require_once("inc/init.inc.php");
+
+//--------------------------------- TRAITEMENTS PHP ---------------------------------//
 if ($_POST) {
+    // debug($_POST);
     $verif_caractere = preg_match('#^[a-zA-Z0-9._-]+$#', $_POST['pseudo']);
-    if (!$verif_caractere || (strlen($_POST['pseudo']) < 1 || strlen($_POST['pseudo']) > 20)) {
-        $contenu .= "<div class='erreur'>Le pseudo doit contenir entre 1 et 20 caractères. <br> 
-    Caractères acceptés : Lettre de A à Z et chiffre de 0 à 9 </div>";
+    if (!$verif_caractere || (strlen($_POST['pseudo']) < 1 || strlen($_POST['pseudo']) > 20)) // 
+    {
+        $contenu .= "<div class='erreur'>Le pseudo doit contenir entre 1 et 20 caractères. <br> Caractère accepté : Lettre de A à Z et chiffre de 0 à 9</div>";
     } else {
-        $utilisateur = executeRequete("SELECT * FROM utilisateur WHERE pseudo ='$_POST[pseudo]'");
+        $utilisateur = executeRequete("SELECT * FROM utilisateur WHERE pseudo='$_POST[pseudo]'");
         if ($utilisateur->num_rows > 0) {
             $contenu .= "<div class='erreur'>Pseudo indisponible. Veuillez en choisir un autre svp.</div>";
         } else {
@@ -15,17 +17,15 @@ if ($_POST) {
             foreach ($_POST as $indice => $valeur) {
                 $_POST[$indice] = htmlEntities(addSlashes($valeur));
             }
-            executeRequete("INSERT INTO utilisateur(pseudo, mot_de_passe, nom, prenom, email, civilite, ville,
-         code_postal, adresse) VALUES ('$_POST[pseudo]', '$_POST[mot_de_passe]', '$_POST[nom]', 
-         '$_POST[prenom]', '$_POST[email]', '$_POST[civilite]', '$_POST[ville]', '$_POST[code_postal]',
-         '$_POST[adresse]')");
+            executeRequete("INSERT INTO utilisateur (pseudo, mot_de_passe, nom, prenom, email, civilite, ville, code_postal, adresse) VALUES ('$_POST[pseudo]', '$_POST[mot_de_passe]', '$_POST[nom]', '$_POST[prenom]', '$_POST[email]', '$_POST[civilite]', '$_POST[ville]', '$_POST[code_postal]', '$_POST[adresse]')");
             $contenu .= "<div class='validation'>Vous êtes inscrit à notre site web. <a href=\"connexion.php\"><u>Cliquez ici pour vous connecter</u></a></div>";
         }
     }
 }
+//--------------------------------- AFFICHAGE HTML ---------------------------------//
 ?>
 <?php require_once("./inc/haut.inc.php"); ?>
-<?php echo $contenu ?>
+<?php echo $contenu; ?>
 <form method="post" action="">
 
     <label for="pseudo">Pseudo</label><br>

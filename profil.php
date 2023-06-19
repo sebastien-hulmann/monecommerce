@@ -1,7 +1,7 @@
 <?php
 require_once("./inc/init.inc.php");
 $title = " | Profil ";
-//------- TRAITEMENT PHP ---//
+//---- TRAITEMENT PHP ----//
 if (!internauteConnecte())
      header("location:connexion.php");
 
@@ -12,7 +12,7 @@ $contenu .= '<p> votre ville est: ' . $_SESSION['utilisateur']['ville'] . '</p><
 $contenu .= '<p> votre code postal est: ' . $_SESSION['utilisateur']['code_postal'] . '</p><br>';
 $contenu .= '<p> votre adresse est: ' . $_SESSION['utilisateur']['adresse'] . '</p></div></div><br><br>';
 
-//--- AFFICHAGE HTML ---//
+//---- AFFICHAGE HTML ---//
 require_once("./inc/haut.inc.php");
 echo $contenu;
 require_once("./inc/bas.inc.php");

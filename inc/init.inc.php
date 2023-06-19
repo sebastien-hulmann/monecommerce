@@ -1,8 +1,4 @@
 <?php 
-// titre onglet
-$title = "";
-
-
 // configuration phpdotenv
 require __DIR__ . '/../vendor/autoload.php';
 Dotenv\Dotenv::createUnsafeImmutable(__DIR__ . '/../')->load();
@@ -30,4 +26,6 @@ require_once("functions.inc.php");
 // debug($mysqli, 0);
 
 $contenu = "";
+// titre onglet
+$title = "";
 

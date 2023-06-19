@@ -1,11 +1,11 @@
 <?php
 require('./inc/init.inc.php');
 $title = " | Accueil ";
-// Pour le debug
+//Pour le debug
 // var_dump(RACINE_SITE);
 // echo '<br>';
 // echo session_status();
-// Notre accueil
+//Notre accueil
 require('./inc/haut.inc.php');
 echo '<h2>Notre future page d\'accueil pour notre boutique</h2>'; ?>
 
